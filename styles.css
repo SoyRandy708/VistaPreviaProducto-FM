@@ -36,10 +36,12 @@ main {
     background-color: var(--white);
     overflow: hidden;
 }
-.tarjeta img {
+.imagenes img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    display: block;
+}
+.imagenes img:last-child {
+    display: none;
 }
 .tarjeta .informacion {
     padding: 20px;
@@ -118,5 +120,19 @@ footer ul li img {
     .tarjeta {
         width: 600px;
         grid-template-columns: repeat(2, 1fr);
+    }
+    .tarjeta .informacion {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .tarjeta .titulo-producto {
+        font-size: 3.8rem;
+    }
+    .imagenes img:first-child {
+        display: none;
+    }
+    .imagenes img:last-child {
+        display: block;
     }
 }
